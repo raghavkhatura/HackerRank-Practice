@@ -1,0 +1,17 @@
+'''Given the participants' score sheet for your University Sports Day, you are required to find the 
+runner-up score. You are given  scores n Store them in a list and find the score of the runner-up.'''
+num=int(input())
+list=[]
+for i in range(0,num):
+    marks=int(input())
+      list.append(marks)
+max=list[0]
+for i in range(1,num):
+    if list[i]>max:
+        max=list[i]
+list.remove(max)
+runner=list[0]
+for i in range(1,len(list)):
+    if list[i]>runner:
+        runner=list[i]
+print(runner)
